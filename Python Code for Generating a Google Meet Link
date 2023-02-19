@@ -1,0 +1,19 @@
+import random 
+
+def generateLink():
+  string = ""
+  hyphen = "-"
+  alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+  for x in range(10):
+    random_int = random.randint(1, 26)
+    letter = alphabets[random_int - 1]
+    string = string + letter
+    if len(string) == 3 or len(string) == 8:
+      string = string + hyphen
+
+  return string
+
+
+my_link = generateLink()
+print(my_link)
